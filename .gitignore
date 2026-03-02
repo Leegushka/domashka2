@@ -1,15 +1,38 @@
-# Python
+# Создайте файл .gitignore
+cat > .gitignore << 'EOF'
+# Виртуальное окружение
+venv/
+env/
+ENV/
+.venv/
+
+# Кэш Python
 __pycache__/
 *.py[cod]
-*.egg
-*.egg-info/
-dist/
-build/
-.env
-*.env
-*.log
-*.sqlite3
+*$py.class
+.pytest_cache/
 
 # IDE
 .idea/
 .vscode/
+*.swp
+*.swo
+
+# Отчеты и временные файлы
+*.txt
+!requirements.txt
+!flake8_report.txt
+!mypy_report.txt
+*_report.txt
+*_test.txt
+
+# Бинарные файлы
+*.bin
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Логи
+*.log
+EOF
