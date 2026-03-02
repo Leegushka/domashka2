@@ -79,16 +79,3 @@ if __name__ == "__main__":
     masked_account = get_mask_account(test_account)
     print(f"Исходный номер счета: {test_account}")
     print(f"Замаскированный:      {masked_account}")
-
-    # Дополнительные тесты с разными данными
-    print("\n" + "=" * 50)
-    print("ДОПОЛНИТЕЛЬНЫЕ ТЕСТЫ")
-    print("=" * 50)
-
-    # Тест с коротким номером карты
-    print(get_mask_card_number("1234"))  # "Недостаточно цифр для маскировки"
-
-    # Тест с коротким номером счета
-    print(get_mask_account("12"))  # "Недостаточно цифр для маскировки"
-
-
