@@ -6,7 +6,7 @@
 - sort_by_date: сортировка операций по дате
 """
 
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Union
 
 
 def filter_by_state(operations: List[Dict[str, Any]], state: str = 'EXECUTED') -> List[Dict[str, Any]]:
@@ -56,7 +56,7 @@ def sort_by_date(operations: List[Dict[str, Any]], reverse: bool = True) -> List
 
 if __name__ == "__main__":
     # Тестовые данные из задания
-    test_data = [
+    test_data: List[Dict[str, Any]] = [
         {'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},
         {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'},
         {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'},
